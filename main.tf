@@ -136,7 +136,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = var.admin_username
-    public_key = file("C:/Users/perpe/Documents/AC/CST8918 300 - DevOps_Infrastructure as Code/Lab 5/vmeas_key.pem") 
+    public_key = file("${path.module}/id_rsa.pub") 
   }
 
   os_disk {
