@@ -64,3 +64,5 @@ create a .gitignore file in that folder with the following content
 .vscode
 .idea
 .idea
+id_rsa
+id_rsa.pub
