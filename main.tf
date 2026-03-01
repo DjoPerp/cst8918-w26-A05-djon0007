@@ -24,3 +24,19 @@ provider "azurerm" {
 provider "cloudinit" {
   # Configuration options
 }
+
+variable "labelPrefix" {
+  type    = string
+  default = "djon0007"
+}
+
+variable "region" {
+  type    = string
+  default = "East US 2" # Or your preferred region
+}
+
+variable "admin_username" {
+  type    = string
+  default = "azureuser"
+}
+
