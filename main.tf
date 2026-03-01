@@ -32,7 +32,7 @@ variable "labelPrefix" {
 
 variable "region" {
   type    = string
-  default = "East US 2" # Or your preferred region
+  default = "West US" # Or your preferred region
 }
 
 variable "admin_username" {
@@ -49,7 +49,8 @@ resource "azurerm_public_ip" "pip" {
   name                = "${var.labelPrefix}-pip"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "standard"
 }
 
 resource "azurerm_virtual_network" "vnet" {
